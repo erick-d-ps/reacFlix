@@ -2,9 +2,9 @@
 ## **Imagens do site**
 
 <p aling="center">
-<img width="700" height="320" src="src/Img/Captura de tela 2025-01-14 183511.png">
-<img width="700" height="320" src="src/Img/Captura de tela 2025-01-14 183545.png">
-<img width="700" height="320" src="src/Img/Captura de tela 2025-01-14 183626.png">
+<img width="500" height="250" src="src/Img/Captura de tela 2025-01-14 183511.png">
+<img width="500" height="250" src="src/Img/Captura de tela 2025-01-14 183545.png">
+<img width="700" height="250" src="src/Img/Captura de tela 2025-01-14 183626.png">
 </p>
 
 ## **Objetivo**
