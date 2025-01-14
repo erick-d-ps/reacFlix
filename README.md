@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# **Site de filmes em cartaz com react** 
+## **Imagens do site**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p aling="center">
+<img width="700" height="320" src="././src/img/captura de tela 2025-01-14 183511.png">
+<img width="700" height="320" src="././src/img/captura de tela 2025-01-14 183545.png">
+<img width="700" height="320" src="././src/img/captura de tela 2025-01-14 183626.png">
+</p>
 
-## Available Scripts
+## **Objetivo**
 
-In the project directory, you can run:
+Criar um site que permita aos usuários explorar uma lista de filmes obtida a partir de uma API externa. O Site pocibilita visualizar detalhes de filmes específicos e salvar e excluir filmes favoritos no armazenamento local (Local Storage).
 
-### `npm start`
+---
+## **Público-Alvo**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Pessoas que buscam filmes que estão em cartaz no cinema. De modo que vejam trailer e salvem seus filmes favoritos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Funcionalidades Principais**
 
-### `npm test`
+### **Páginas e Rotas**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Home:**
+   - Header com função de ir para filmes favoritos e voltar para pagina home
+   - Exibe uma lista de 10 filmes que estão em cartaz. filmes obtidos pela API.
+2. **Filme:**
+   - Exibe todos os detalhes de um filme selecionado, incluindo:
+     - Título.
+     - Descrição.
+     - Nota.
+   - Botão para adicionar o filme à lista de favoritos.
+   - Botão com link para ver trailer do filme no youtube 
+3. **Favoritos:**
+   - Lista todos os filmes salvos pelo usuário no Local Storage.
+   - Permite excluir filmes da lista de favoritos.
+4. **Erro:**
+   - Página exibida para rotas não encontradas com uma mensagem dizendo que a apagina não foi encontrada e opção de retorno à home.
 
-### `npm run build`
+   ---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ### **Funcionalidades Específicas**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   1. **Favoritos:**
+   - Salvar filmes no Local Storage ao clicar em um botão.
+   - Recuperar e exibir os filmes salvos na página de Favoritos.
+   - Remover filmes da lista de favoritos.
+   2.  **Detalhes dos Filmes:**
+   - Exibição completa de informações obtidas pela API para um filme específico.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Componentes**
 
-### `npm run eject`
+- **Header:**
+  - Barra de navegação com links para Home e Favoritos.
+- **Rotas:**
+  - Definidas usando `react-router-dom`.
+  - Rotas principais: `/`, `/filme/:id`, `/favoritos`, `/*` (página de erro).
+- **Páginas:**
+  - Home.
+  - Filme.
+  - Favoritos.
+  - Erro.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  ### **Local Storage**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Salvar Favoritos:**
+  - Filmes são armazenados no Local Storage com uma chave única.
+- **Exibir Favoritos:**
+  - Recuperar e renderizar os dados salvos na página de Favoritos.
+- **Excluir Favoritos:**
+  - Remover filmes da lista e atualizar o Local Storage.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## **Tecnologias Utilizadas**
 
-## Learn More
+### **Frontend:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React.js.
+- React Router DOM.
+- Axios.
+- CSS para estilização.
+- react-toastify.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **API Externa:**
 
-### Code Splitting
+- Integração com uma API de filmes (ex.: [The Movie Database API - TMDB](https://www.themoviedb.org/)).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **Armazenamento Local:**
 
-### Analyzing the Bundle Size
+- Local Storage para salvar filmes favoritos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## **Como Executar o Projeto**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Clone este repositório:
+   ```bash
+   git clone git@github.com:erick-d-ps/reacFlix.git
 
-### Advanced Configuration
+2. Instale as dependências:
+   ```bash
+    yarn add
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Configure a API:
+   ```
+   - Crie uma conta no TMDB e obtenha sua chave de API.
+   - Substitua a chave de API no arquivo de configuração do projeto.
+    
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+    yarn start
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
